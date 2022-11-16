@@ -83,6 +83,7 @@ class StudentInputFragment : Fragment() {
                         binding.idTextField.text.toString(),
                         binding.nameTextField.text.toString()
                     )
+                    hideKeyboard()
                     showInputSuccessDialog()
                 }
             }
@@ -107,6 +108,7 @@ class StudentInputFragment : Fragment() {
                             name = binding.nameTextField.text.toString()
                         )
                         viewModel.updateStudent(updatedStudent)
+                        hideKeyboard()
                         showInputSuccessDialog()
                     }
 
